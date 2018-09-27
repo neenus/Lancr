@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @service_provider.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @service_provider.last_name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @service_provider.email %>
+</p>
+
+<%= link_to 'Edit', edit_service_provider_path(@service_provider) %> |
+<%= link_to 'Back', service_providers_path %>
