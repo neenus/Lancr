@@ -17,6 +17,7 @@ class BookingService
   def book
     # Use instance variables here
     service.customers << customer 
+    # book.save
   end
 
 end

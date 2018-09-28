@@ -1,5 +1,6 @@
 class Service < ApplicationRecord
 
+  belongs_to :service_provider
   has_many :bookings
   has_many( :customers, {through: :bookings})
 
