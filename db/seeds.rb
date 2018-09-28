@@ -30,6 +30,25 @@ sp3 = ServiceProvider.create(
   email: Faker::Internet.free_email
 )
 
+# customers seed
+
+customer1 = Customer.create(
+  first_name: Faker::Name.name,
+  last_name: Faker::Name.name,
+  email: Faker::Internet.free_email
+)
+
+customer2 = Customer.create(
+  first_name: Faker::Name.name,
+  last_name: Faker::Name.name,
+  email: Faker::Internet.free_email
+)
+
+customer3 = Customer.create(
+  first_name: Faker::Name.name,
+  last_name: Faker::Name.name,
+  email: Faker::Internet.free_email
+)
 
 services1 = Service.create(
   title: "Lawn Mowing",
