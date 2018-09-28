@@ -13,3 +13,19 @@
  *= require_tree .
  *= require_self
  */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
+
+// App
+@import "services";
+
+// Global
+body {
+  padding-top: 70px;
+}
+
+// Bootstrap adjustments
+form.button_to {
+  display: inline;
+}
