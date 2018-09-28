@@ -30,7 +30,7 @@ class ServicesController < ApplicationController
   def create
 
     @service = Service.new(service_params)
-    byebug
+
     @service.img = params[:service][:img]
 
 
