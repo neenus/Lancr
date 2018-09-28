@@ -79,7 +79,7 @@ class ServicesController < ApplicationController
           :description,
           :start_time,
           :end_time,
-          :price
+          :price,
           :img
     )
     end
