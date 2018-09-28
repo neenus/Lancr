@@ -2,7 +2,8 @@ Rails.application.routes.draw do
 
 
 
-  resources :services
+  resources :services, only: [:index, :new, :create, :show]
+
 
   resources :service_providers
 
