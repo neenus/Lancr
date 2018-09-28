@@ -75,7 +75,7 @@ service3 = Service.create(
   start_time: DateTime.new(2018,11,16,16,00),
   end_time: DateTime.new(2018,11,16,18,00),
   price: 25,
-  img:'/uploads/img/3/<cook></cook>.jpg'
+  img:'/uploads/img/3/cook.jpg'
   )
 
 puts "Seeding completed ....."

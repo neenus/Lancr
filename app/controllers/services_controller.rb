@@ -18,6 +18,7 @@ class ServicesController < ApplicationController
     @service = Service.new
 
 
+
   end
 
   # GET /services/1/edit
@@ -29,8 +30,8 @@ class ServicesController < ApplicationController
   def create
 
     @service = Service.new(service_params)
-    @service.img = params[:img]
-
+    byebug
+    @service.img = params[:service][:img]
 
 
     if @service.save
