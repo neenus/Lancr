@@ -16,6 +16,8 @@ class ServicesController < ApplicationController
   # GET /services/new
   def new
     @service = Service.new
+
+
   end
 
   # GET /services/1/edit
@@ -31,15 +33,12 @@ class ServicesController < ApplicationController
 
 
 
-    respond_to do |format|
-      if @service.save
-        format.html { redirect_to @service, notice: 'Service was successfully created.' }
-        format.json { render :show, status: :created, location: @service }
-      else
-        format.html { render :new }
-        format.json { render json: @service.errors, status: :unprocessable_entity }
-      end
+    if @service.save
+      redirect_to "/services"
+    else
+       render :new
     end
+
   end
 
   # PATCH/PUT /services/1
@@ -74,6 +73,14 @@ class ServicesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def service_params
-      params.permit(:title, :description, :start_time, :end_time, :price, :img)
+
+      params.require(:service).permit(
+          :title,
+          :description,
+          :start_time,
+          :end_time,
+          :price,
+          :img
+    )
     end
 end
