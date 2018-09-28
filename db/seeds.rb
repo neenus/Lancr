@@ -50,32 +50,32 @@ customer3 = Customer.create(
   email: Faker::Internet.free_email
 )
 
-services1 = Service.create(
-  title: "Lawn Mowing",
-  description: "I will come to your house and mow your lawn",
-  start_time: DateTime.new(2018,10,11,12,00),
-  end_time: DateTime.new(2018,10,11,13,00),
-  price: 10,
-  img: '/uploads/img/1/lawn.jpg'
-  )
+# services1 = Service.create(
+#   title: "Lawn Mowing",
+#   description: "I will come to your house and mow your lawn",
+#   start_time: DateTime.new(2018,10,11,12,00),
+#   end_time: DateTime.new(2018,10,11,13,00),
+#   price: 10,
+#   img: '/uploads/img/1/lawn.jpg'
+#   )
 
 
-service2 = Service.create(
-  title: "Hair Salon Apt",
-  description: "You can come down to my award winning new hair salon and get a fresh cut.",
-  start_time: DateTime.new(2018,10,11,3,00),
-  end_time: DateTime.new(2018,10,11,5,00),
-  price: 30,
-  img: '/uploads/img/2/hair.jpg'
-  )
+# service2 = Service.create(
+#   title: "Hair Salon Apt",
+#   description: "You can come down to my award winning new hair salon and get a fresh cut.",
+#   start_time: DateTime.new(2018,10,11,3,00),
+#   end_time: DateTime.new(2018,10,11,5,00),
+#   price: 30,
+#   img: '/uploads/img/2/hair.jpg'
+#   )
 
-service3 = Service.create(
-  title: "Cooking lesson",
-  description: "I'm and expert baker who loves to pass on my recipes, lets meet up and I'll teach you how to make something delicious.",
-  start_time: DateTime.new(2018,11,16,16,00),
-  end_time: DateTime.new(2018,11,16,18,00),
-  price: 25,
-  img:'/uploads/img/3/cook.jpg'
-  )
+# service3 = Service.create(
+#   title: "Cooking lesson",
+#   description: "I'm and expert baker who loves to pass on my recipes, lets meet up and I'll teach you how to make something delicious.",
+#   start_time: DateTime.new(2018,11,16,16,00),
+#   end_time: DateTime.new(2018,11,16,18,00),
+#   price: 25,
+#   img:'/uploads/img/3/cook.jpg'
+#   )
 
 puts "Seeding completed ....."
