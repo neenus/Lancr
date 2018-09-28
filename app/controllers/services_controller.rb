@@ -27,7 +27,11 @@ class ServicesController < ApplicationController
   # POST /services
   # POST /services.json
   def create
+
     @service = Service.new(service_params)
+    @service.img = params[:img]
+
+
 
     if @service.save
       redirect_to "/services"
@@ -69,12 +73,14 @@ class ServicesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def service_params
+
       params.require(:service).permit(
           :title,
           :description,
           :start_time,
           :end_time,
           :price
+          :img
     )
     end
 end
