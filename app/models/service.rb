@@ -12,7 +12,7 @@ class Service < ApplicationRecord
   validate :end_must_be_after_start
   validate :start_must_be_after_present
 
-
+  mount_uploader :img, ImgUploader
 
   def end_must_be_after_start
     if start_time.present? && end_time.present? && start_time >= end_time
