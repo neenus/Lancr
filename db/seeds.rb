@@ -8,7 +8,7 @@
 
 
 # service_provider seed
-puts "Seeding Data ....."
+puts "Seeding DataBase ....."
 
 ServiceProvider.destroy_all
 
@@ -29,4 +29,31 @@ sp3 = ServiceProvider.create(
   last_name: Faker::Name.name,
   email: Faker::Internet.free_email
 )
+
+
+services1 = Service.create(
+  title: "Lawn Mowing",
+  description: "I will come to your house and mow your lawn",
+  start_time: DateTime.new(2018,10,11,12,00),
+  end_time: DateTime.new(2018,10,11,13,00),
+  price: 10
+  )
+  
+  
+service2 = Service.create(
+  title: "Hair Salon Apt",
+  description: "You can come down to my award winning new hair salon and get a fresh cut.",
+  start_time: DateTime.new(2018,10,11,3,00),
+  end_time: DateTime.new(2018,10,11,5,00),
+  price: 30
+  )
+  
+service3 = Service.create(
+  title: "Cooking lesson",
+  description: "I'm and expert baker who loves to pass on my recipes, lets meet up and I'll teach you how to make something delicious.",
+  start_time: DateTime.new(2018,11,16,16,00),
+  end_time: DateTime.new(2018,11,16,18,00),
+  price: 25
+  )
+      
 puts "Seeding completed ....."

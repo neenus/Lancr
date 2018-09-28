@@ -1,3 +1,7 @@
+$textBoxBlue: rgb(197, 232, 236);
+
+
+
 body {
   background-color: #fff;
   color: #333;
@@ -81,4 +85,9 @@ div {
 
 label {
   display: block;
+}
+
+.wrapper{
+  margin:0;
+  max-width:1180px;
 }
