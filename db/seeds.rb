@@ -5,3 +5,28 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+# service_provider seed
+puts "Seeding Data ....."
+
+ServiceProvider.destroy_all
+
+sp1 = ServiceProvider.create(
+  first_name: Faker::Name.name,
+  last_name: Faker::Name.name,
+  email: Faker::Internet.free_email
+)
+
+sp2 = ServiceProvider.create(
+  first_name: Faker::Name.name,
+  last_name: Faker::Name.name,
+  email: Faker::Internet.free_email
+)
+
+sp3 = ServiceProvider.create(
+  first_name: Faker::Name.name,
+  last_name: Faker::Name.name,
+  email: Faker::Internet.free_email
+)
+puts "Seeding completed ....."
