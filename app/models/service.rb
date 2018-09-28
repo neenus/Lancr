@@ -1,9 +1,9 @@
 class Service < ApplicationRecord
 
-<<<<<<< HEAD
   has_many :bookings
   has_many( :customers, {through: :bookings})
-=======
+
+  
   validates :title, presence: true
   validates :description, presence: true
   validates :start_time, presence: true
@@ -27,6 +27,5 @@ class Service < ApplicationRecord
   end
 
 
->>>>>>> master
 end
 
