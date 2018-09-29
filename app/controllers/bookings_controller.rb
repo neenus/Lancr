@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  
+
   # GET /bookings
   # GET /bookings.json
   def index
@@ -13,7 +13,7 @@ class BookingsController < ApplicationController
 
   # GET /bookings/new
   def new
-    @booking = booking.new
+    @booking = Booking.new
   end
 
   # GET /bookings/1/edit
@@ -23,15 +23,23 @@ class BookingsController < ApplicationController
   # POST /bookings
   # POST /bookings.json
   def create
-    @booking = booking.new(booking_params)
+    # TODO: Get Customer object
+    customer = Customer.first
+    # TODO: Get Service object - From Params
+    service = Service.find(params[:service_id])
+
+
+    booking = BookingService.book(customer, service)
 
     respond_to do |format|
-      if @booking.save
-        format.html { redirect_to @booking, notice: 'booking was successfully created.' }
-        format.json { render :show, status: :created, location: @booking }
+      if booking.save
+        service.is_booked = true
+        service.save
+        format.html { redirect_to root_path, notice: 'You have successfully booked the service' }
+        format.json { render :show, status: :created, location: booking }
       else
-        format.html { render :new }
-        format.json { render json: @booking.errors, status: :unprocessable_entity }
+        format.html { redirect_to service_path(params[:service_id]) }
+        format.json { render json: booking.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -70,5 +78,5 @@ class BookingsController < ApplicationController
     def booking_params
       params.require(:booking).permit(:first_name, :last_name, :email)
     end
-  
+
 end

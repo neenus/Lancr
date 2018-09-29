@@ -7,7 +7,7 @@ class BookingService
     # @start_time = start_time
     # @end_time = end_time
   end
- 
+
   # In controller:
   # BookingService.book(customer, service)
   def self.book(customer, service)
@@ -16,7 +16,12 @@ class BookingService
 
   def book
     # Use instance variables here
-    service.customers << customer 
+    # service.customers << customer
+
+    Booking.new({
+      customer: customer,
+      service: service
+    })
     # book.save
   end
 
