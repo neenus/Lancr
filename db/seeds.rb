@@ -78,9 +78,19 @@ service2 = Service.create(
 # Booking seeds
 puts "Seeding booking"
 
+
 booking1 = Booking.create(
   customer_id: 1,
   service_id: 1
 )
+# booking2 = Booking.create(
+#   customer_id: 1,
+#   service_id: 2
+# )
+# booking3 = Booking.create(
+#   customer_id: 1,
+#   service_id: 3
+# )
+
 
 puts "Seeding completed ....."
