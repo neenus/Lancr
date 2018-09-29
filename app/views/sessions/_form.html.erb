@@ -1,27 +1,13 @@
-<%= form_with(model: session, local: true) do |form| %>
-  <% if session.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(session.errors.count, "error") %> prohibited this session from being saved:</h2>
+<div class="wrapper">
+  <div class="form">
+    <h3>Login</h3>
 
-      <ul>
-      <% session.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email %>
+    <%= form_with(url: "/login") do |form| %>
+      <label for='email'>Email</label>
+      <%= form.text_field(:email) %>
+      <label for='password'>Password</label>
+      <%= form.password_field(:password) %>
+       <input type="submit" value="Submit" class='button'>
+    <% end %>
   </div>
-  
-  <div class="field">
-    <%= form.label :password %>
-    <%= form.password_field :Password %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+</div>
