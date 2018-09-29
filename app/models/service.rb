@@ -1,10 +1,10 @@
-class Service < ApplicationRecord
+  class Service < ApplicationRecord
 
   belongs_to :service_provider
   has_many :bookings
   has_many( :customers, {through: :bookings})
 
-  
+
   validates :title, presence: true
   validates :description, presence: true
   validates :start_time, presence: true

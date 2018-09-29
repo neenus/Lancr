@@ -28,11 +28,11 @@ class ServicesController < ApplicationController
   # POST /services
   # POST /services.json
   def create
-
+    byebug
     @service = Service.new(service_params)
 
     @service.img = params[:service][:img]
-
+    @service.service_provider = ServiceProvider.first
 
     if @service.save
       redirect_to "/services"
@@ -81,7 +81,7 @@ class ServicesController < ApplicationController
           :start_time,
           :end_time,
           :price,
-          :img
+          :img,
     )
     end
 end
