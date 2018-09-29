@@ -1,21 +1,22 @@
 <tr>
   <td>
-    <%= image_tag service.img.to_s %>
+    <%= image_tag service.img.to_s, :class => "style_image" %>
   </td>
   <td>
     <h4><%= service.title %></h4>
     <br>
-    <p><%= service.description %></p>
+    <p><h4><%= service.description %></h4></p>
   </td>
   <td>
-    <%= service.start_time %>
-  </td>
-  <td>
-
-    <%= service.end_time %>
+    <h4><%= service.start_time %></h4>
 
   </td>
   <td>
-    <%= service.price %>
+
+    <h4><%= service.end_time %></h4>
+
+  </td>
+  <td>
+    <h4>$<%= service.price %></h4>
   </td>
 </tr>
