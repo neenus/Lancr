@@ -8,7 +8,11 @@ html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}bo
 
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
+$bananaLeaf: rgb(110, 216, 128);
 
+$alertBooked: rgb(255, 107, 151);
+
+$generalText: rgba(49, 165, 224,0.8);
 
 .wrapper{
   margin:0 auto;
@@ -26,15 +30,22 @@ html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}bo
 
 .serviceFeed{
   margin: 0 10px;
-  background-color: coral;
+  background-color:$bananaLeaf ;
   padding: 10px;
   width:30%;
   border-radius: 5px;
+  border: 2px solid darken($bananaLeaf, 10%);
+
+  h3{
+    font-size:35px;
+    color:transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+  }
   p{
     padding:10px;
     background-color: $textBoxBlue;
     border-radius: 5px;
-
   }
 
   img{
@@ -50,6 +61,40 @@ html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}bo
     background-color: transparent;
   }
 }
+
+.timeBox{
+  padding-left: 7px;
+  width: 85%;
+  background-color: $generalText;
+  border: 1px solid darken($generalText, 10%);
+  margin-bottom: 10px;
+
+  h4{
+    margin: 5px auto}
+}
+
+
+.bookButton{
+  font-size: 15px;
+  width:75px;
+  background-color: darken(lightgrey,10%);
+  padding:10px;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+.isBooked{
+  border: 1px solid black;
+  margin: 0 auto;
+  font-weight: 900;
+  border-radius:15px;
+  padding:10px;
+  text-align: center;
+  background-color: $alertBooked;
+  width:80%;
+}
+
+
 
 
 

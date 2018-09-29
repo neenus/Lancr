@@ -6,7 +6,14 @@
     <h3><%= @service.title %></h3>
     <p><%= @service.description %></p>
     <%= image_tag(@service.img.url) %>
-    <h5><%= @service.price %>$ /per session</h5>
-        <h4><%= @service.start_time %></h4>
-        <h4><%= @service.end_time %></h4>
+    <h5><%= @service.price %>$/per session</h5>
+    <div class="timeBox">
+      <h4>Session Time</h5>
+      <h5><%= @service.start_time.time.strftime("On %D from %I:%m %p") %> - <%= @service.end_time.time.strftime("%I:%m %p") %></h5>
+    </div>
+    <% if @service.is_booked  %>
+      <div class='isBooked'>SORRRY THIS SERVICE IS BOOKED</div>
+    <%else %>
+      <div class="bookButton"><%= link_to "book", service_book_path(@service), method: :post %></div>
+    <% end %>
   </div>

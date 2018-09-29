@@ -50,4 +50,7 @@ customer3 = Customer.create(
   email: Faker::Internet.free_email
 )
 
+
+
+
 puts "Seeding completed ....."
