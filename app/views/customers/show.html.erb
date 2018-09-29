@@ -1,3 +1,43 @@
+
+<section class="orders-show">
+
+  <header class="page-header">
+    <h1>Booking successfully! <%= @customer.first_name%></h1>
+  </header>
+
+  <div class="order-summary jumbotron">
+    <h4>Thank you for your booking!</h4>
+  </div>
+
+
+<div class="order-summary jumbotron">
+  <div class="panel panel-default items">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th colspan="2">Services</th>
+          <th>Start_time</th>
+          <th>End_time</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @customer.bookings.each do |book| %>
+          <%= render 'service', service: book.service %>
+        <% end %>
+      </tbody>
+
+    </table>
+  </div>
+
+  <%= link_to "Continue Booking", services_path, class: 'btn btn-lg btn-primary' %>
+
+</section>
+
+
+
+
+
 <p id="notice"><%= notice %></p>
 
 <p>
