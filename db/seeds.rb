@@ -9,8 +9,9 @@
 
 # service_provider seed
 puts "Seeding DataBase ....."
+puts "Seeding service providers"
 
-ServiceProvider.destroy_all
+
 
 sp1 = ServiceProvider.create(
   first_name: Faker::Name.name,
@@ -31,6 +32,8 @@ sp3 = ServiceProvider.create(
 )
 
 # customers seed
+puts "Seeding customers"
+
 
 customer1 = Customer.create(
   first_name: Faker::Name.name,
@@ -50,7 +53,45 @@ customer3 = Customer.create(
   email: Faker::Internet.free_email
 )
 
+# Services seeds
+puts "Seeding services"
 
 
+service1 = Service.create(
+  service_provider_id: sp1.id,
+  title: Faker::Job.title,
+  description: Faker::Lorem.paragraph,
+  start_time: Faker::Time.forward(10, :day),
+  end_time: Faker::Time.forward(20, :day),
+  price: Faker::Commerce.price,
+  img: Rails.root.join('/vagrant/projects/lancr/public/uploads/lawn.jpg').open
+)
+
+service2 = Service.create(
+  service_provider_id: sp1.id,
+  title: Faker::Job.title,
+  description: Faker::Lorem.paragraph,
+  start_time: Faker::Time.forward(10, :day),
+  end_time: Faker::Time.forward(20, :day),
+  price: Faker::Commerce.price,
+  img: Rails.root.join('/vagrant/projects/lancr/public/uploads/lawn.jpg').open
+)
+
+# Booking seeds
+puts "Seeding booking"
+
+
+booking1 = Booking.create(
+  customer_id: 1,
+  service_id: 1
+)
+booking2 = Booking.create(
+  customer_id: 1,
+  service_id: 2
+)
+booking3 = Booking.create(
+  customer_id: 1,
+  service_id: 3
+)
 
 puts "Seeding completed ....."
