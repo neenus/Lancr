@@ -11,8 +11,6 @@
 puts "Seeding DataBase ....."
 puts "Seeding service providers"
 
-
-
 sp1 = ServiceProvider.create(
   first_name: Faker::Name.name,
   last_name: Faker::Name.name,
@@ -33,7 +31,6 @@ sp3 = ServiceProvider.create(
 
 # customers seed
 puts "Seeding customers"
-
 
 customer1 = Customer.create(
   first_name: Faker::Name.name,
@@ -56,7 +53,6 @@ customer3 = Customer.create(
 # Services seeds
 puts "Seeding services"
 
-
 service1 = Service.create(
   service_provider_id: sp1.id,
   title: Faker::Job.title,
@@ -64,7 +60,8 @@ service1 = Service.create(
   start_time: Faker::Time.forward(10, :day),
   end_time: Faker::Time.forward(20, :day),
   price: Faker::Commerce.price,
-  img: Rails.root.join('/vagrant/Final1/Lancr/public/uploads/lawn.jpg').open
+  img: Rails.root.join('/vagrant/Final1/Lancr/public/uploads/lawn.jpg').open,
+  is_booked: true
 )
 
 service2 = Service.create(
@@ -74,24 +71,16 @@ service2 = Service.create(
   start_time: Faker::Time.forward(10, :day),
   end_time: Faker::Time.forward(20, :day),
   price: Faker::Commerce.price,
-  img: Rails.root.join('/vagrant/Final1/Lancr/public/uploads/lawn.jpg').open
+  img: Rails.root.join('/vagrant/Final1/Lancr/public/uploads/lawn.jpg').open,
+  is_booked: false
 )
 
 # Booking seeds
 puts "Seeding booking"
 
-
 booking1 = Booking.create(
   customer_id: 1,
   service_id: 1
-)
-booking2 = Booking.create(
-  customer_id: 1,
-  service_id: 2
-)
-booking3 = Booking.create(
-  customer_id: 1,
-  service_id: 3
 )
 
 puts "Seeding completed ....."
