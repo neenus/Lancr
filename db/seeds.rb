@@ -64,7 +64,7 @@ service1 = Service.create(
   start_time: Faker::Time.forward(10, :day),
   end_time: Faker::Time.forward(20, :day),
   price: Faker::Commerce.price,
-  img: Rails.root.join('/vagrant/projects/lancr/public/uploads/lawn.jpg').open
+  img: Rails.root.join('/vagrant/LancrFinal/public/uploads/lawn.jpg').open
 )
 
 service2 = Service.create(
@@ -74,7 +74,7 @@ service2 = Service.create(
   start_time: Faker::Time.forward(10, :day),
   end_time: Faker::Time.forward(20, :day),
   price: Faker::Commerce.price,
-  img: Rails.root.join('/vagrant/projects/lancr/public/uploads/lawn.jpg').open
+  img: Rails.root.join('/vagrant/LancrFinal/public/uploads/lawn.jpg').open
 )
 
 # Booking seeds
