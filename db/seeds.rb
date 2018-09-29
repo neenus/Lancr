@@ -72,7 +72,7 @@ service2 = Service.create(
   end_time: Faker::Time.forward(20, :day),
   price: Faker::Commerce.price,
   img: Rails.root.join('/vagrant/projects/lancr/public/uploads/lawn.jpg').open,
-  is_booked: falsel
+  is_booked: false
 )
 
 # Booking seeds
