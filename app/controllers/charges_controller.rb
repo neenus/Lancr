@@ -5,7 +5,11 @@ end
 
 def create
   # Amount in cents
+<<<<<<< HEAD
   @amount = 500
+=======
+  @amount =
+>>>>>>> master
 
   customer = Stripe::Customer.create(
     :email => params[:stripeEmail],

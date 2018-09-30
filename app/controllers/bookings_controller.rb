@@ -24,7 +24,11 @@ class BookingsController < ApplicationController
   # POST /bookings.json
   def create
     # TODO: Get Customer object
-    customer = Customer.first
+    customer = current_user
+
+    puts "***************"
+    puts  current_user
+    puts "***************"
     # TODO: Get Service object - From Params
     service = Service.find(params[:service_id])
 

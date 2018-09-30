@@ -1,19 +1,34 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>First name:</strong>
-  <%= @customer.first_name %>
-</p>
+<section class="orders-show">
 
-<p>
-  <strong>Last name:</strong>
-  <%= @customer.last_name %>
-</p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @customer.email %>
-</p>
 
-<%= link_to 'Edit', edit_customer_path(@customer) %> |
-<%= link_to 'Back', customers_path %>
+  <div class="order-summary jumbotron">
+    <h2>Welcome <%= @customer.first_name%>!</h2>
+  </div>
+
+
+<div class="order-summary jumbotron">
+  <div class="panel panel-default items">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th colspan="2"><h3>Services</h3></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @customer.bookings.each do |book| %>
+          <%= render 'service', service: book.service %>
+        <% end %>
+      </tbody>
+
+    </table>
+  </div>
+
+  <%= link_to "Continue Booking", services_path, class: 'btn btn-lg btn-primary' %>
+
+</section>
+
+
+
+
