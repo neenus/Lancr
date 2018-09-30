@@ -13,16 +13,16 @@ Rails.application.routes.draw do
   end
   resources :service_providers
 
-<<<<<<< HEAD
+
   resources :charges
-=======
+
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
 
   get '/signup' => 'customers#new'
   post '/customers' => 'customers#create'
->>>>>>> master
+
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
