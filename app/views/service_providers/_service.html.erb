@@ -1,0 +1,30 @@
+<tr>
+  <td>
+    <%= image_tag service.img.to_s, :class => "style_image" %>
+  </td>
+  <td>
+    <h4><%= service.title %></h4>
+    <br>
+    <p><h4><%= service.description %></h4></p>
+  </td>
+  <td>
+    <h4><%= service.start_time.time.strftime("On %D from %I:%m  %p") %></h4>
+
+  </td>
+  <td>
+
+    <h4><%= service.end_time.time.strftime("to %I:%m %p") %></h4>
+
+  </td>
+  <td>
+    <h4>$<%= service.price %></h4>
+  </td>
+  <td>
+    <% if service.is_booked %>
+    <h4 id="booked"><%= "Booked!" %></h4>
+    <%else%>
+
+    <h4 id="not"><%= "Not booked yet!" %></h4>
+    <% end %>
+  </td>
+</tr>
