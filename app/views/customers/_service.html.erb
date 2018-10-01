@@ -8,12 +8,12 @@
     <p><h4><%= service.description %></h4></p>
   </td>
   <td>
-    <h4><%= service.start_time %></h4>
+    <h4><%= service.start_time.time.strftime("On %D from %I:%m  %p") %></h4>
 
   </td>
   <td>
 
-    <h4><%= service.end_time %></h4>
+    <h4><%= service.end_time.time.strftime("to %I:%m %p") %></h4>
 
   </td>
   <td>

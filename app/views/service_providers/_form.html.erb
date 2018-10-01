@@ -1,7 +1,7 @@
 <%= form_with(model: service_provider, local: true) do |form| %>
   <% if service_provider.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(service_provider.errors.count, "error") %> prohibited this service_provider from being saved:</h2>
+      <h2><%= pluralize(service_provider.errors.count, "error") %> prohibited this service provider from being saved:</h2>
 
       <ul>
       <% service_provider.errors.full_messages.each do |message| %>
@@ -24,6 +24,16 @@
   <div class="field">
     <%= form.label :email %>
     <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :password %>
+    <%= form.password_field :password %>
+  </div>
+
+  <div class="field">
+    <%= form.label :password_confirmation %>
+    <%= form.password_field :password_confirmation %>
   </div>
 
   <div class="actions">
