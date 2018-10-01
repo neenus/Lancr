@@ -12,10 +12,11 @@
   <body>
     <%= render 'layouts/top_nav' %>
 
-    <div class="wrapper">
-
+    <main class="container">
      <%= yield %>
+    </main>
 
-    </div>
+   <%= yield :end_of_body %>
+
   </body>
 </html>
