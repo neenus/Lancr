@@ -1,0 +1,13 @@
+<div class="wrapper">
+  <div class="form">
+    <h3>Login</h3>
+
+    <%= form_with(url: "/sp-login") do |form| %>
+      <label for='email'>Email</label>
+      <%= form.text_field(:email) %>
+      <label for='password'>Password</label>
+      <%= form.password_field(:password) %>
+       <input type="submit" value="Submit" class='button'>
+    <% end %>
+  </div>
+</div>

@@ -32,7 +32,7 @@ class ServicesController < ApplicationController
     @service = Service.new(service_params)
 
     @service.img = params[:service][:img]
-    @service.service_provider = ServiceProvider.first
+    @service.service_provider = current_service_provider
 
     if @service.save
       redirect_to "/services"
