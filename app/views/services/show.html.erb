@@ -1,7 +1,3 @@
-
-
-
-
   <div class="serviceFeed">
     <h3><%= @service.title %></h3>
     <p><%= @service.description %></p>
@@ -14,6 +10,16 @@
     <% if @service.is_booked  %>
       <div class='isBooked'>SORRRY THIS SERVICE IS BOOKED</div>
     <%else %>
-      <div class="bookButton"><%= link_to "book", service_book_path(@service), method: :post %></div>
+
+
+        <%=render partial: "charges/new" %>
+
     <% end %>
-  </div>
+
+    <% puts "******************"  %>
+    <% puts  'from'  %>
+   <% puts "** ***  *** *** ***  ****"  %>
+    <% puts  @service.price  %>
+    <% puts "******************"  %>
+
+

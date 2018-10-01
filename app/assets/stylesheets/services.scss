@@ -61,6 +61,8 @@ $generalText: rgba(49, 165, 224,0.8);
   border: 2px solid darken($bananaLeaf, 10%);
 
   h3{
+    width:100%;
+    line-height: 1.05;
     font-size:35px;
     color:transparent;
     -webkit-text-stroke-width: 2px;
@@ -94,7 +96,9 @@ $generalText: rgba(49, 165, 224,0.8);
   margin-bottom: 10px;
 
   h4{
-    margin: 5px auto}
+    line-height: 30px;
+    margin: 5px auto;
+  }
 }
 
 
