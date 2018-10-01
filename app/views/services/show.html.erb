@@ -10,16 +10,16 @@
     <% if @service.is_booked  %>
       <div class='isBooked'>SORRRY THIS SERVICE IS BOOKED</div>
     <%else %>
-      <div class="bookButton">
+
 
         <%=render partial: "charges/new" %>
-        <%= link_to "book", service_book_path(@service), method: :post %></div>
+
     <% end %>
 
     <% puts "******************"  %>
-    <% puts  'from show'  %>
+    <% puts  'from'  %>
    <% puts "** ***  *** *** ***  ****"  %>
     <% puts  @service.price  %>
     <% puts "******************"  %>
-  </div>
+
 

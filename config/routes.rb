@@ -1,20 +1,19 @@
 Rails.application.routes.draw do
 
-
-
-
-
   root to: "services#index"
 
   resources :customers
   resources :bookings, only: [:index, :new, :create, :show]
   resources :services, only: [:index, :new, :create, :show] do
     post :book, to: 'bookings#create'
+    post :charge, to: 'charges#create'
+    get :charge, to: 'charges#create'
   end
+
   resources :service_providers
 
-
   resources :charges
+  # resources :charges
 
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'

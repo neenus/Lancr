@@ -26,9 +26,6 @@ class BookingsController < ApplicationController
     # TODO: Get Customer object
     customer = current_user
 
-    puts "***************"
-    puts  current_user
-    puts "***************"
     # TODO: Get Service object - From Params
     service = Service.find(params[:service_id])
 
