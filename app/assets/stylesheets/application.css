@@ -30,3 +30,7 @@ body {
 form.button_to {
   display: inline;
 }
+
+.serviceFeed {
+      margin-top: 6em;
+}
