@@ -6,13 +6,18 @@
       </div>
     <% end %>
     <label class="amount">
-      <span>Amount: $5.00</span>
+      <span>Amount: $ <%= @service.price %>.00</span>
     </label>
   </article>
 
+  <% puts '*************************************' %>
+  <% puts ENV['STRIPE_PUBLISHABLE_KEY'] %>
+  <% puts '*************************************' %>
+
   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+
           data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-          data-description="A month's subscription"
-          data-amount="500"
+          data-description= '<%= @service.price%> for <%= @service.title %>'
+          data-amount='<%= @service.price %>'
           data-locale="auto"></script>
 <% end %>

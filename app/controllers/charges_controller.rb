@@ -3,29 +3,35 @@ class ChargesController < ApplicationController
 def new
 end
 
+
+
 def create
   # Amount in cents
-<<<<<<< HEAD
-  @amount = 500
-=======
-  @amount =
->>>>>>> master
+
+  # @amount = @service.id.price
+
+ puts "******************"
+ puts  'from charges_controller . rb'
+ puts "** ***  *** *** ***  ****"
+ puts  @service.price
+ puts "******************"
+
 
   customer = Stripe::Customer.create(
-    :email => params[:stripeEmail],
+    :email => current_user.email,
     :source  => params[:stripeToken]
   )
 
   charge = Stripe::Charge.create(
     :customer    => customer.id,
     :amount      => @amount,
-    :description => 'Rails Stripe customer',
+    :description => 'Lancr Freelancer Charge',
     :currency    => 'cad'
   )
 
 rescue Stripe::CardError => e
   flash[:error] = e.message
-  redirect_to new_charge_path
+  redirect_to 'customers/@current_user'
 end
 
 end
