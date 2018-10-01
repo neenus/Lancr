@@ -27,9 +27,8 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
-
 .DS_Store
-
+app/.DS_Store
 /public/uploads/pixel-3-xl-render-phone-designer-2.jpg
 /public/uploads/tmp/1538265351-18998-0001-0513/
 /public/uploads/tmp/1538265511-19097-0001-0570/

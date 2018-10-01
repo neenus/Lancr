@@ -70,6 +70,6 @@ class ServiceProvidersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def service_provider_params
-      params.require(:service_provider).permit(:first_name, :last_name, :email)
+      params.require(:service_provider).permit(:first_name, :last_name, :email, :password, :password_confirmation)
     end
 end
