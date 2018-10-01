@@ -1,6 +1,8 @@
 class ServiceProvidersController < ApplicationController
+  
   before_action :set_service_provider, only: [:show, :edit, :update, :destroy]
-
+  
+  
   # GET /service_providers
   # GET /service_providers.json
   def index
@@ -70,6 +72,6 @@ class ServiceProvidersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def service_provider_params
-      params.require(:service_provider).permit(:first_name, :last_name, :email)
+      params.require(:service_provider).permit(:first_name, :last_name, :email, :password, :password_confirmation)
     end
 end

@@ -11,6 +11,9 @@ gem 'pg'
 gem 'puma', '~> 3.11'
 
 
+gem 'popper_js'
+
+
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'font-awesome-rails'
 # Use SCSS for stylesheets

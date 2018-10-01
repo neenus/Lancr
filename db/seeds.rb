@@ -61,6 +61,7 @@ service1 = Service.create(
   end_time: Faker::Time.forward(20, :day),
   price: Faker::Commerce.price,
   img: Rails.root.join('/vagrant/LancrFinal/public/uploads/lawn.jpg').open,
+
   is_booked: true
 )
 

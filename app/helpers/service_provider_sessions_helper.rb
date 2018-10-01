@@ -1,0 +1,2 @@
+module ServiceProviderSessionsHelper
+end

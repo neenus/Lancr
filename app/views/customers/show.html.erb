@@ -17,7 +17,7 @@
         </tr>
       </thead>
       <tbody>
-        <% @customer.bookings.each do |book| %>
+        <% @customer.bookings.reverse.each do |book| %>
           <%= render 'service', service: book.service %>
         <% end %>
       </tbody>

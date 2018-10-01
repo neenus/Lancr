@@ -1,0 +1,9 @@
+// Vendor
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
+ //= require jquery
+
+.navbar-inner {
+    height: 80px;
+}
