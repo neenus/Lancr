@@ -14,7 +14,7 @@ def create
 
 
   customer = Stripe::Customer.create(
-    :email => current_user.email,
+    :email => current_customer.email,
     :source  => params[:stripeToken]
   )
 
@@ -28,30 +28,31 @@ def create
 
   if charge["paid"] == true
     # TODO: Get Customer object
-    customer = current_user
+    c = current_customer
     # TODO: Get Service object - From Params
     service = Service.find(params[:service_id])
-    booking = BookingService.book(customer, service)
-    respond_to do |format|
+    booking = BookingService.book(c, service)
+
       if booking.save
         service.is_booked = true
         service.save
-        redirect_to 'customers/customer_url(@customer)'
+        redirect_to "/customers/#{current_customer.id} "
+
 
       else
-        format.html { redirect_to service_path(params[:service_id]) }
-        format.json { render json: booking.errors, status: :unprocessable_entity }
+        redirect_to '/services/params[service_id]'
       end
+
+
+
+
     end
 
 
-
+    rescue Stripe::CardError => e
+      flash[:error] = e.message
+    redirect_to '/customers/params[:service_id]'
   end
 
-
-rescue Stripe::CardError => e
-  flash[:error] = e.message
-redirect_to 'customers/params[:service_id]'
-end
 
 end

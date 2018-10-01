@@ -16,10 +16,6 @@ Rails.application.routes.draw do
   resources :charges
   # resources :charges
 
-  get '/login' => 'sessions#new'
-  post '/login' => 'sessions#create'
-  get '/logout' => 'sessions#destroy'
-
 
   # customer login routes
   get '/login' => 'customer_sessions#new'
