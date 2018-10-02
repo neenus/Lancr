@@ -5,6 +5,7 @@
   has_many( :customers, {through: :bookings})
 
 
+
   validates :title, presence: true
   validates :description, presence: true
   validates :start_time, presence: true
