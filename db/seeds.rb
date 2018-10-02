@@ -67,7 +67,7 @@ service1 = Service.create(
   end_time: Faker::Time.forward(20, :day),
   price: Faker::Commerce.price,
 
-  img: Rails.root.join('/vagrant/LancrFinal/public/uploads/lawn.jpg').open,
+  img: Rails.root.join('/vagrant/projects/lancr/public/uploads/lawn.jpg').open,
 
 
   is_booked: true
@@ -80,7 +80,7 @@ service2 = Service.create(
   start_time: Faker::Time.forward(10, :day),
   end_time: Faker::Time.forward(20, :day),
   price: Faker::Commerce.price,
-  img: Rails.root.join('/vagrant/LancrFinal/public/uploads/lawn.jpg').open,
+  img: Rails.root.join('/vagrant/projects/lancr/public/uploads/lawn.jpg').open,
   is_booked: false
 )
 
@@ -91,7 +91,7 @@ service3 = Service.create(
   start_time: Faker::Time.forward(10, :day),
   end_time: Faker::Time.forward(20, :day),
   price: Faker::Commerce.price,
-  img: Rails.root.join('/vagrant/LancrFinal/public/uploads/lawn.jpg').open,
+  img: Rails.root.join('/vagrant/projects/lancr/public/uploads/lawn.jpg').open,
   is_booked: false
 )
 
@@ -102,7 +102,7 @@ service4 = Service.create(
   start_time: Faker::Time.forward(10, :day),
   end_time: Faker::Time.forward(20, :day),
   price: Faker::Commerce.price,
-  img: Rails.root.join('/vagrant/LancrFinal/public/uploads/lawn.jpg').open,
+  img: Rails.root.join('/vagrant/projects/lancr/public/uploads/lawn.jpg').open,
   is_booked: false
 )
 
@@ -113,7 +113,7 @@ service5 = Service.create(
   start_time: Faker::Time.forward(10, :day),
   end_time: Faker::Time.forward(20, :day),
   price: Faker::Commerce.price,
-  img: Rails.root.join('/vagrant/LancrFinal/public/uploads/lawn.jpg').open,
+  img: Rails.root.join('/vagrant/projects/lancr/public/uploads/lawn.jpg').open,
   is_booked: false
 )
 
@@ -124,7 +124,7 @@ service6 = Service.create(
   start_time: Faker::Time.forward(10, :day),
   end_time: Faker::Time.forward(20, :day),
   price: Faker::Commerce.price,
-  img: Rails.root.join('/vagrant/LancrFinal/public/uploads/lawn.jpg').open,
+  img: Rails.root.join('/vagrant/projects/lancr/public/uploads/lawn.jpg').open,
   is_booked: false
 )
 
@@ -135,7 +135,7 @@ service7 = Service.create(
   start_time: Faker::Time.forward(10, :day),
   end_time: Faker::Time.forward(20, :day),
   price: Faker::Commerce.price,
-  img: Rails.root.join('/vagrant/LancrFinal/public/uploads/lawn.jpg').open,
+  img: Rails.root.join('/vagrant/projects/lancr/public/uploads/lawn.jpg').open,
   is_booked: false
 )
 
@@ -146,7 +146,7 @@ service8 = Service.create(
   start_time: Faker::Time.forward(10, :day),
   end_time: Faker::Time.forward(20, :day),
   price: Faker::Commerce.price,
-  img: Rails.root.join('/vagrant/LancrFinal/public/uploads/lawn.jpg').open,
+  img: Rails.root.join('/vagrant/projects/lancr/public/uploads/lawn.jpg').open,
   is_booked: false
 )
 
@@ -157,7 +157,7 @@ service9 = Service.create(
   start_time: Faker::Time.forward(10, :day),
   end_time: Faker::Time.forward(20, :day),
   price: Faker::Commerce.price,
-  img: Rails.root.join('/vagrant/LancrFinal/public/uploads/lawn.jpg').open,
+  img: Rails.root.join('/vagrant/projects/lancr/public/uploads/lawn.jpg').open,
   is_booked: false
 )
 
@@ -168,7 +168,7 @@ service10 = Service.create(
   start_time: Faker::Time.forward(10, :day),
   end_time: Faker::Time.forward(20, :day),
   price: Faker::Commerce.price,
-  img: Rails.root.join('/vagrant/LancrFinal/public/uploads/lawn.jpg').open,
+  img: Rails.root.join('/vagrant/projects/lancr/public/uploads/lawn.jpg').open,
   is_booked: false
 )
 
@@ -179,7 +179,7 @@ service11 = Service.create(
   start_time: Faker::Time.forward(10, :day),
   end_time: Faker::Time.forward(20, :day),
   price: Faker::Commerce.price,
-  img: Rails.root.join('/vagrant/LancrFinal/public/uploads/lawn.jpg').open,
+  img: Rails.root.join('/vagrant/projects/lancr/public/uploads/lawn.jpg').open,
   is_booked: true
 )
 
@@ -190,7 +190,7 @@ service12 = Service.create(
   start_time: Faker::Time.forward(10, :day),
   end_time: Faker::Time.forward(20, :day),
   price: Faker::Commerce.price,
-  img: Rails.root.join('/vagrant/LancrFinal/public/uploads/lawn.jpg').open,
+  img: Rails.root.join('/vagrant/projects/lancr/public/uploads/lawn.jpg').open,
   is_booked: false
 )
 
@@ -201,7 +201,7 @@ service13 = Service.create(
   start_time: Faker::Time.forward(10, :day),
   end_time: Faker::Time.forward(20, :day),
   price: Faker::Commerce.price,
-  img: Rails.root.join('/vagrant/LancrFinal/public/uploads/lawn.jpg').open,
+  img: Rails.root.join('/vagrant/projects/lancr/public/uploads/lawn.jpg').open,
   is_booked: false
 )
 
@@ -212,7 +212,7 @@ service14 = Service.create(
   start_time: Faker::Time.forward(10, :day),
   end_time: Faker::Time.forward(20, :day),
   price: Faker::Commerce.price,
-  img: Rails.root.join('/vagrant/LancrFinal/public/uploads/lawn.jpg').open,
+  img: Rails.root.join('/vagrant/projects/lancr/public/uploads/lawn.jpg').open,
   is_booked: false
 )
 
@@ -223,7 +223,7 @@ service15 = Service.create(
   start_time: Faker::Time.forward(10, :day),
   end_time: Faker::Time.forward(20, :day),
   price: Faker::Commerce.price,
-  img: Rails.root.join('/vagrant/LancrFinal/public/uploads/lawn.jpg').open,
+  img: Rails.root.join('/vagrant/projects/lancr/public/uploads/lawn.jpg').open,
   is_booked: false
 )
 
@@ -234,7 +234,7 @@ service16 = Service.create(
   start_time: Faker::Time.forward(10, :day),
   end_time: Faker::Time.forward(20, :day),
   price: Faker::Commerce.price,
-  img: Rails.root.join('/vagrant/LancrFinal/public/uploads/lawn.jpg').open,
+  img: Rails.root.join('/vagrant/projects/lancr/public/uploads/lawn.jpg').open,
   is_booked: false
 )
 
@@ -245,7 +245,7 @@ service17 = Service.create(
   start_time: Faker::Time.forward(10, :day),
   end_time: Faker::Time.forward(20, :day),
   price: Faker::Commerce.price,
-  img: Rails.root.join('/vagrant/LancrFinal/public/uploads/lawn.jpg').open,
+  img: Rails.root.join('/vagrant/projects/lancr/public/uploads/lawn.jpg').open,
   is_booked: false
 )
 
@@ -256,7 +256,7 @@ service18 = Service.create(
   start_time: Faker::Time.forward(10, :day),
   end_time: Faker::Time.forward(20, :day),
   price: Faker::Commerce.price,
-  img: Rails.root.join('/vagrant/LancrFinal/public/uploads/lawn.jpg').open,
+  img: Rails.root.join('/vagrant/projects/lancr/public/uploads/lawn.jpg').open,
   is_booked: false
 )
 
@@ -267,7 +267,7 @@ service19 = Service.create(
   start_time: Faker::Time.forward(10, :day),
   end_time: Faker::Time.forward(20, :day),
   price: Faker::Commerce.price,
-  img: Rails.root.join('/vagrant/LancrFinal/public/uploads/lawn.jpg').open,
+  img: Rails.root.join('/vagrant/projects/lancr/public/uploads/lawn.jpg').open,
   is_booked: false
 )
 
@@ -278,7 +278,7 @@ service20 = Service.create(
   start_time: Faker::Time.forward(10, :day),
   end_time: Faker::Time.forward(20, :day),
   price: Faker::Commerce.price,
-  img: Rails.root.join('/vagrant/LancrFinal/public/uploads/lawn.jpg').open,
+  img: Rails.root.join('/vagrant/projects/lancr/public/uploads/lawn.jpg').open,
 
   is_booked: false
 )
