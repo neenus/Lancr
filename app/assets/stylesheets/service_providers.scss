@@ -1,6 +1,10 @@
 // Place all the styles related to the service_providers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+// Vendor
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
 
 .style_image{
 
