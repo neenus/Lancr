@@ -53,16 +53,14 @@ $generalText: rgba(49, 165, 224,0.8);
 }
 
 .serviceFeed{
-  height:600px;
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
+  padding: 1px;
   width:30%;
   border-radius: 5px;
   border: 3px solid darken(white, 10%);
   background-color: rgba(0,255,255,0.2);
 
   h3{
+
     width:100%;
     line-height: 1.05;
     font-size:35px;
@@ -70,22 +68,35 @@ $generalText: rgba(49, 165, 224,0.8);
 
   }
   p{
+
     padding:10px;
 
     border-radius: 5px;
+
   }
 
-  img{
-    width:100%;
-    align-self: flex-end;
+  .imgContainer{
+    position:relative;
+    width:325px;
+    height:183px;
+    .object-fit_cover { object-fit: cover }
+    img { height: 183px; background-color: #444;}
+    img[class] {
+      width: 100%;
+    }
   }
+
   a{
-    color:black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color:white;
     text-decoration: none;
   }
   a:hover{
     text-decoration: none;
-    color:black;
+    color:white;
     background-color: transparent;
   }
 }
@@ -104,14 +115,7 @@ $generalText: rgba(49, 165, 224,0.8);
   }
 }
 
-.bookButton{
-  font-size: 15px;
-  width:75px;
-  background-color: darken(lightgrey,10%);
-  padding:10px;
-  border-radius: 5px;
-  margin: 0 auto;
-}
+
 
 .isBooked{
   border: 1px solid black;

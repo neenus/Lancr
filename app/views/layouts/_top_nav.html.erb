@@ -4,10 +4,22 @@
   <% else %>
     <h1>Lancer</h1>
   <% end %>
+
+  <% if session[:service_provider_id] %>
+    <%= link_to 'New Service', new_service_path %>
+    <li><%= link_to "#{ServiceProvider.find(session[:service_provider_id])[:first_name]}, sign out", :sp_logout, method: :post  %></li>
+    <% end %>
+
+
   <ul class="">
+    <!-- if customer logged in -->
     <% if session[:customer_id] %>
-    <li><%= link_to "#{Customer.find(session[:customer_id])[:first_name]}, sign out", :logout, method: :post  %></li>
+    <li>
+      <%= link_to "#{Customer.find(session[:customer_id])[:first_name]}, sign out", :logout, method: :post  %><
+      /li>
+    <!-- is general customer is logged in -->
     <% elsif session[:service_provider_id]%>
+
     <li><%= link_to "#{ServiceProvider.find(session[:service_provider_id])[:first_name]}, sign out", :sp_logout, method: :post  %></li>
     <% else %>
     <li class="dropdown">

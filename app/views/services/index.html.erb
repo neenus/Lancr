@@ -7,12 +7,17 @@
 <h1>Services</h1>
 
   <div class="containerFlex">
-    <% @services.each do |service| %>
+    <% @services.reverse.each do |service| %>
+
+
       <div class="serviceFeed">
         <%= link_to(service) do %>
         <h3><%= service.title %></h3>
         <p><%= service.description %></p>
-        <%= image_tag service.img.url %>
+        <div class="imgContainer">
+          <%= image_tag service.img.url, :class => 'object-fit_cover' %>
+        </div>
+
 
 
         <% end %>
@@ -22,7 +27,7 @@
 
 
 
-  <%= link_to 'New Service', new_service_path %>
+
 
 
 
