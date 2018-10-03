@@ -8,7 +8,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .serviceFeed {
-      margin-top: 6em;
+  margin-top: 6em;
 }
 .newSec{
   margin-top: 3em;
@@ -19,13 +19,13 @@
   margin-left: 7.5em;
   }
 .style_image{
-
-        max-width: 100%;
-        max-height: 150px;
-        margin: 0px;
-        display: block;
+  max-width: 100%;
+  max-height: 150px;
+  margin: 0px;
+  display: block;
 }
-$textBoxBlue: rgb(197, 232, 236);
+$serviceBlue: #1d00ff;
+$mainFont:'Fredoka One', cursive;
 html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
 
 .clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
@@ -33,7 +33,6 @@ html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}bo
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 $bananaLeaf: rgb(110, 216, 128);
-
 $alertBooked: rgb(255, 107, 151);
 
 $generalText: rgba(49, 165, 224,0.8);
@@ -46,36 +45,38 @@ $generalText: rgba(49, 165, 224,0.8);
 .containerFlex{
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
   border-radius: 5px;
   max-width: 1180px;
-
 }
 
 .serviceFeed{
-  margin: 0 10px;
-  background-color:$bananaLeaf ;
+  height:600px;
+  display: flex;
+  flex-direction: column;
   padding: 10px;
   width:30%;
   border-radius: 5px;
-  border: 2px solid darken($bananaLeaf, 10%);
+  border: 3px solid darken(white, 10%);
+  background-color: rgba(0,255,255,0.2);
 
   h3{
     width:100%;
     line-height: 1.05;
     font-size:35px;
-    color:transparent;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: black;
+    color:white;
+
   }
   p{
     padding:10px;
-    background-color: $textBoxBlue;
+
     border-radius: 5px;
   }
 
   img{
     width:100%;
+    align-self: flex-end;
   }
   a{
     color:black;
@@ -96,11 +97,11 @@ $generalText: rgba(49, 165, 224,0.8);
   margin-bottom: 10px;
 
   h4{
+
     line-height: 30px;
     margin: 5px auto;
   }
 }
-
 
 .bookButton{
   font-size: 15px;

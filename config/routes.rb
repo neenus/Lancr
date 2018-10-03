@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
-  root to: "services#index"
+  resources :tests
+  root to: "tests#index"
 
   resources :customers
   resources :bookings, only: [:index, :new, :create, :show]

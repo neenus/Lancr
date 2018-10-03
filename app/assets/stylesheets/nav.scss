@@ -1,0 +1,118 @@
+$lancr:'Shrikhand', cursive;
+$mainFont:'Fredoka One', cursive;
+
+
+body{
+  margin:0;
+  padding:0;
+  color:white;
+  li{
+    color:white;
+    list-style-type: none;
+  }
+  a{
+    color:white;
+    text-decoration: none;
+  }
+  a:visited{
+    color:white;
+    text-decoration: none;
+  }
+  a:hover{
+    background-color: transparent;
+    color:white;
+    text-decoration: none;
+  }
+  span{
+     color:white;
+    text-decoration: none;
+  }
+  h1,h2,h3,h4,h5{
+        margin: 0;
+  }
+  h1{
+    font-family:$lancr;
+    color:white;
+
+  }
+  img{
+
+    border-radius: 10px;
+  }
+}
+
+nav{
+  margin:0;
+  width:100%;
+  float:right;
+  color:white;
+  display: flex;
+  flex-direction: row;
+  ul{
+    float: right;
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+
+.dropdown-menu, .dropdown, .dropdown-toggle,
+.dropdown-menu:focus, .dropdown:focus, .dropdown-toggle:focus{
+  color:white;
+  text-decoration: none;
+  a{
+  color:white;
+  text-decoration: none;
+  }
+}
+
+.splash{
+  padding:15px;
+  width:100%;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  img{
+    width:415px;
+    border-radius: 50%;
+  }
+
+  .left,.right{
+    width: 100%;
+  }
+  .right{
+    padding-left:35px;
+    display: flex;
+    flex-direction: column;
+    width:70%;
+    .splashImg{
+
+      width:100%;
+      img{
+        float:right;
+      }
+    }
+    h1{
+
+      font-size: 35px;
+      padding-top: 25px;
+      text-align: right;
+      width:100%;
+    }
+  }
+  .left{
+
+
+    display: flex;
+    flex-direction: column;
+    width:30%;
+    h1{
+    padding-bottom: 15px;
+    font-size:60px;
+    }
+  }
+}

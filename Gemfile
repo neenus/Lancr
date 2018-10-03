@@ -11,11 +11,8 @@ gem 'pg'
 gem 'puma', '~> 3.11'
 
 
-gem 'popper_js'
-
-
 gem 'bootstrap-sass', '~> 3.3.6'
-gem 'font-awesome-rails'
+gem "font-awesome-rails"
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
