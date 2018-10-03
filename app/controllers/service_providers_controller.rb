@@ -1,8 +1,8 @@
 class ServiceProvidersController < ApplicationController
-  
+
   before_action :set_service_provider, only: [:show, :edit, :update, :destroy]
-  
-  
+
+
   # GET /service_providers
   # GET /service_providers.json
   def index
@@ -12,6 +12,15 @@ class ServiceProvidersController < ApplicationController
   # GET /service_providers/1
   # GET /service_providers/1.json
   def show
+
+
+    @service_provider = ServiceProvider.find(params[:id])
+
+
+
+    @services = @service_provider.services
+
+
   end
 
   # GET /service_providers/new
