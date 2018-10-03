@@ -10,7 +10,10 @@ class CustomersController < ApplicationController
   # GET /customers/1
   # GET /customers/1.json
   def show
+
     @customer = Customer.includes(bookings: [:service]).find(params[:id])
+
+
   end
 
   # GET /customers/new

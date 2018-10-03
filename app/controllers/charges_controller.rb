@@ -9,7 +9,7 @@ def create
   # Amount in cents
 
 
-  @amount = Service.find(params[:service_id]).price
+  @amount = Service.find(params[:service_id]).price * 100
 
 
 
