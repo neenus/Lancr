@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
-  root to: "services#index"
+  resources :tests
+  root to: "tests#index"
 
   resources :customers
   resources :bookings, only: [:index, :new, :create, :show]
@@ -14,7 +15,11 @@ Rails.application.routes.draw do
   resources :customer_sessions
 
   resources :charges
-  # resources :charges
+  # # resources :charges
+
+  # get '/login' => 'sessions#new'
+  # post '/login' => 'sessions#create'
+  # get '/logout' => 'sessions#destroy'
 
 
   # customer login routes

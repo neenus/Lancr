@@ -1,7 +1,11 @@
   <div class="serviceFeed">
     <h3><%= @service.title %></h3>
     <p><%= @service.description %></p>
-    <%= image_tag(@service.img.url) %>
+
+    <div class="imgContainer">
+          <%= image_tag @service.img.url, :class => 'object-fit_cover' %>
+        </div>
+
     <h5>$<%= @service.price %>/per session</h5>
     <div class="timeBox">
       <h4>Session Time</h5>

@@ -1,69 +1,48 @@
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
+<nav>
+  <% if current_page?('/') %>
 
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-        <span class="sr-only">Lancr navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="/">LANCER</a>
-    </div>
+  <% else %>
+    <h1>Lancer</h1>
+  <% end %>
 
-
-    <div id="navbar" class="navbar-collapse collapse">
+  <% if session[:service_provider_id] %>
+    <%= link_to 'New Service', new_service_path %>
+    <li><%= link_to "#{ServiceProvider.find(session[:service_provider_id])[:first_name]}, sign out", :sp_logout, method: :post  %></li>
+    <% end %>
 
 
+  <ul class="">
+    <!-- if customer logged in -->
+    <% if session[:customer_id] %>
+    <li>
+      <%= link_to "#{Customer.find(session[:customer_id])[:first_name]}, sign out", :logout, method: :post  %><
+      /li>
+    <!-- is general customer is logged in -->
+    <% elsif session[:service_provider_id]%>
 
-
-      <ul class="nav navbar-nav navbar-right">
-
-
-
-
-
-
-        <% if session[:customer_id] %>
-          <li><%= link_to "#{Customer.find(session[:customer_id])[:first_name]}, sign out", :logout, method: :post  %></li>
-
-         <% elsif session[:service_provider_id]%>
-
-          <li><%= link_to "#{ServiceProvider.find(session[:service_provider_id])[:first_name]}, sign out", :sp_logout, method: :post  %></li>
-
-        <% else %>
-
-         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-             <span class="text-danger"> Register </span>
-
-          </a>
-          <ul class="dropdown-menu">
-            <li><%= link_to 'Sign up as user', [:signup] %></li>
-            <li><%= link_to 'Sign up as provider', [:sp_signup]
-             %></li>
-          </ul>
-        </li>
-
-
-         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-             <span class="text-danger"> Log in </span>
-
-          </a>
-          <ul class="dropdown-menu">
-            <li><%= link_to 'Login as user', [:login] %></li>
-            <li><%= link_to 'Login as provider', [:sp_login] %></li>
-          </ul>
-        </li>
-
-
-        <% end %>
-
+    <li><%= link_to "#{ServiceProvider.find(session[:service_provider_id])[:first_name]}, sign out", :sp_logout, method: :post  %></li>
+    <% else %>
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+       Register <i class="fas fa-chevron-down"></i>
+      </a>
+      <ul class="dropdown-menu">
+        <li><%= link_to 'Sign up as user', [:signup] %></li>
+        <li><%= link_to 'Sign up as provider', [:sp_signup]
+        %></li>
       </ul>
-
-    </div>
-
-
-  </div>
+    </li>
+    </ul>
+    <ul>
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+        Log in <i class="fas fa-chevron-down"></i>
+      </a>
+      <ul class="dropdown-menu">
+        <li><%= link_to 'Login as user', [:login] %></li>
+        <li><%= link_to 'Login as provider', [:sp_login] %></li>
+      </ul>
+    </li>
+    <% end %>
+  </ul>
 </nav>
