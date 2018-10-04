@@ -1,5 +1,6 @@
 
 
+    <p id="notice" class="notice2"><%= notice %></p>
     <%= form_with(url: "/login") do |form| %>
     <%= form.label :email %>
     <%= form.text_field :email, class: 'form-control' %>
@@ -7,4 +8,5 @@
     <%= form.password_field :password, class: 'form-control' %>
     <%= form.submit "Submit", class: 'formButton', id: "actions" %>
     <% end %>
+
 

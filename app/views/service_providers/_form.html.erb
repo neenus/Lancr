@@ -7,7 +7,7 @@
 
       <ul>
       <% service_provider.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+        <li id="errorCount"><%= message %></li>
       <% end %>
       </ul>
     </div>
@@ -37,6 +37,8 @@
     <%= form.label :password_confirmation %>
     <%= form.password_field :password_confirmation, class: 'form-control' %>
   </div>
+
+
 
   <div class="actions text-center"  >
     <%= form.submit "Register as provider", class: 'formButton'  %>
