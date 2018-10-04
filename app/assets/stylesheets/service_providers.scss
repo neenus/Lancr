@@ -9,7 +9,7 @@
 
 .tableImg{
   width:150px;
-
+}
 $alertBooked: rgb(255, 107, 151);
 
 .style_image{
@@ -42,7 +42,6 @@ $alertBooked: rgb(255, 107, 151);
 
 
 
-
 .RRSP{
   display:flex;
   margin-top: 8em
@@ -64,12 +63,8 @@ $alertBooked: rgb(255, 107, 151);
   width:80%;
 }
 
-#errorCount {
-    border-top-left-radius: 13px;
-    border-top-right-radius: 13px;
-
+.price{
+  padding: 5px;
+  font-size:20px;
 }
-
-
-
 

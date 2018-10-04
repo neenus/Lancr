@@ -104,9 +104,12 @@ $generalText: rgba(49, 165, 224,0.8);
 
 
 .serviceShow{
-  margin-top:20px;
+  margin-top:30px;
   display: flex;
   flex-direction: row;
+  img{
+    max-height:300px;
+  }
   .service{
     padding: 10px 5px;
     border-radius: 5px;
@@ -114,21 +117,41 @@ $generalText: rgba(49, 165, 224,0.8);
     background-color: rgba(0,255,255,0.5);
     -webkit-text-stroke: 0.7px black;
   }
+  .bio{
+    padding: 10px 5px;
+    border-radius: 5px;
+    border: 3px solid white;
+    background-color: rgba(100,50,250,0.5);
+    -webkit-text-stroke: 0.7px black;
+  }
 
   .serviceL{
+    margin: 0 10px;
     flex: 1 1 50%;
   }
    .serviceR{
-    content:"";
+    margin: 0 10px;
+    padding: 0 15px;
+
     flex: 1 1 50%;
   }
-  .isBoooked{
 
-  }
+}
+$alertBooked: rgb(255, 107, 151);
+
+.isBoooked{
+  border: 1.5px solid red;
+  padding: 5px;
+  border-radius: 20px;
+  background-color: $alertBooked;
 }
 
 
-
+.timeBox{
+  border: 1.5px solid black;
+  border-radius: 5px;
+  padding: 5px;
+}
 
 
 

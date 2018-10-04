@@ -2,23 +2,28 @@
 <div class="serviceL">
   <div class="service">
     <h3><%= @service.title %></h3>
-    <p><%= @service.description %></p>
+    <p class="profileBio"><%= @service.description %></p>
     <div class="imgContainer">
       <%= image_tag @service.img.url, :class => 'object-fit_cover' %>
     </div>
-    <h5>$<%= @service.price %>/per session</h5>
+    <h5 class="price">$<%= @service.price %>/per session</h5>
     <div class="timeBox">
-      <h4>Session Time</h4---->
+      <h4>Session Time</h4>
       <h5><%= @service.start_time.time.strftime("On %D from %I:%m %p") %> - <%= @service.end_time.time.strftime("%I:%m %p") %></h5>
     </div>
+    <br>
     <% if @service.is_booked  %>
-    <div class='isBooked'>SORRRY THIS SERVICE IS BOOKED</div>
+    <div class='isBooked'> SORRRY THIS SERVICE IS BOOKED</div>
     <%else %>
     <%=render partial: "charges/new" %>
     <% end %>
   </div>
 </div>
 <div class="serviceR">
-
+  <div class="bio">
+    <h3 class="firstName"><%= @service.service_provider.first_name %> <%= @service.service_provider.last_name %></h3>
+    <%= image_tag @service.service_provider.img.url, :class => 'profilePic' %>
+    <p class="profileBio"><%= @service.service_provider.bio %></p>
+  </div>
 </div>
 </div>

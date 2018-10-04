@@ -1,3 +1,52 @@
 // Place all the styles related to the tests controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.statement, .splash{
+  height:100vh;
+}
+
+.statement{
+  -webkit-text-stroke: 1px black;
+}
+.siteMission{
+  margin: 35px 0;
+  width:75%;
+  line-height:1.5;
+  -webkit-text-stroke: 1px black;
+  font-size:25px;
+}
+
+.profilePic{
+  margin: 10px 25%;;
+  border-radius: 50%;
+  border:3px solid white;
+}
+
+.firstName{
+  margin: 0 25%;
+}
+
+.profileBio{
+  border: 1px solid black;
+
+  border-radius: 5px;
+  background-color: rgba(63, 191, 161,0.7) ;
+  padding: 5px;
+  font-size: 15px;
+  margin: 10px auto;
+  width:100%;
+}
+$alertBooked: rgb(255, 107, 151);
+.isBooked{
+  width: 300px;
+  margin: 10px 0;
+  border-radius: 5px;
+  background-color: $alertBooked;
+  font-size: 13px;
+  padding: 10px;
+  border: 1.5px solid red;
+}
+
+
