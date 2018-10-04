@@ -6,6 +6,8 @@
 @import "bootstrap";
 @import "font-awesome";
 
+$alertBooked: rgb(255, 107, 151);
+
 .style_image{
 
         max-width: 100%;
@@ -46,6 +48,24 @@
   width:10em;
   text-align: center
 }
+
+#error_explanation {
+  border: 1px solid black;
+  margin: 0 auto;
+  font-weight: 900;
+  border-radius:15px;
+  padding:10px;
+  text-align: center;
+  background-color: $alertBooked;
+  width:80%;
+}
+
+#errorCount {
+    border-top-left-radius: 13px;
+    border-top-right-radius: 13px;
+
+}
+
 
 
 

@@ -1,11 +1,14 @@
 <div class="wrapper">
   <div class="form">
 
-
     <div class="row">
       <div class="col-sm-6 col-sm-offset-1">
 
         <%= form_with(url: "/sp-login") do |form| %>
+
+
+        <p id="notice" class="notice1"><%= notice %></p>
+
 
         <div class="form-group">
               <%= form.label :email %>

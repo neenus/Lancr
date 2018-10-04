@@ -12,8 +12,8 @@ class CustomerSessionsController < ApplicationController
       redirect_to '/'
     else
       # if user's login fails send back to user page
-      flash[:warning] = "Invalid email or password"
-      redirect_to '/login'
+
+      redirect_to '/login', :notice => "Invalid email or password!"
     end
   end
 

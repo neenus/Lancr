@@ -15,8 +15,7 @@
     <!-- if customer logged in -->
     <% if session[:customer_id] %>
     <li>
-      <%= link_to "#{Customer.find(session[:customer_id])[:first_name]}, sign out", :logout, method: :post  %><
-      /li>
+      <%= link_to "#{Customer.find(session[:customer_id])[:first_name]}, sign out", :logout, method: :post  %></li>
     <!-- is general customer is logged in -->
     <% elsif session[:service_provider_id]%>
 
@@ -27,8 +26,8 @@
        Register <i class="fas fa-chevron-down"></i>
       </a>
       <ul class="dropdown-menu">
-        <li><%= link_to 'Sign up as user', [:signup] %></li>
-        <li><%= link_to 'Sign up as provider', [:sp_signup]
+        <li><%= link_to 'Sign up as customer', [:signup] %></li>
+        <li><%= link_to 'Sign up as service provider', [:sp_signup]
         %></li>
       </ul>
     </li>
@@ -39,8 +38,8 @@
         Log in <i class="fas fa-chevron-down"></i>
       </a>
       <ul class="dropdown-menu">
-        <li><%= link_to 'Login as user', [:login] %></li>
-        <li><%= link_to 'Login as provider', [:sp_login] %></li>
+        <li><%= link_to 'Login as customer', [:login] %></li>
+        <li><%= link_to 'Login as service provider', [:sp_login] %></li>
       </ul>
     </li>
     <% end %>

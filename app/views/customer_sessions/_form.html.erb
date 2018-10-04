@@ -8,6 +8,9 @@
 
         <%= form_with(url: "/login") do |form| %>
 
+        <p id="notice" class="notice2"><%= notice %></p>
+
+
         <div class="form-group">
               <%= form.label :email %>
               <%= form.text_field :email, class: 'form-control' %>

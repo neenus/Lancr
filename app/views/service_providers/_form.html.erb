@@ -7,7 +7,7 @@
 
       <ul>
       <% service_provider.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+        <li id="errorCount"><%= message %></li>
       <% end %>
       </ul>
     </div>
