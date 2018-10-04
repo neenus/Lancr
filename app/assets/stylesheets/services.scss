@@ -53,39 +53,38 @@ $generalText: rgba(49, 165, 224,0.8);
 }
 
 .serviceFeed{
-  padding: 1px;
+  position:relative;
+  margin: 10px 0;
+  padding: 10px 10px 193px;
   width:30%;
   border-radius: 5px;
   border: 3px solid darken(white, 10%);
   background-color: rgba(0,255,255,0.2);
 
   h3{
-
     width:100%;
     line-height: 1.05;
     font-size:35px;
     color:white;
-
   }
   p{
-
     padding:10px;
-
     border-radius: 5px;
-
   }
-
   .imgContainer{
-    position:relative;
+
+    position:absolute;
+    bottom:10px;
     width:325px;
     height:183px;
     .object-fit_cover { object-fit: cover }
-    img { height: 183px; background-color: #444;}
+    img {
+     height: 183px; background-color: #444;
+   }
     img[class] {
       width: 100%;
     }
   }
-
   a{
     display: flex;
     flex-direction: column;
@@ -99,34 +98,37 @@ $generalText: rgba(49, 165, 224,0.8);
     color:white;
     background-color: transparent;
   }
+
 }
 
-.timeBox{
-  padding-left: 7px;
-  width: 85%;
-  background-color: $generalText;
-  border: 1px solid darken($generalText, 10%);
-  margin-bottom: 10px;
 
-  h4{
 
-    line-height: 30px;
-    margin: 5px auto;
+.serviceShow{
+  margin-top:20px;
+  display: flex;
+  flex-direction: row;
+  .service{
+    padding: 10px 5px;
+    border-radius: 5px;
+    border: 3px solid white;
+    background-color: rgba(0,255,255,0.5);
+    -webkit-text-stroke: 0.7px black;
+  }
+
+  .serviceL{
+    flex: 1 1 50%;
+  }
+   .serviceR{
+    content:"";
+    flex: 1 1 50%;
+  }
+  .isBoooked{
+
   }
 }
 
 
 
-.isBooked{
-  border: 1px solid black;
-  margin: 0 auto;
-  font-weight: 900;
-  border-radius:15px;
-  padding:10px;
-  text-align: center;
-  background-color: $alertBooked;
-  width:80%;
-}
 
 
 

@@ -1,48 +1,82 @@
 <nav>
-  <% if current_page?('/') %>
 
-  <% else %>
-    <h1>Lancer</h1>
-  <% end %>
-
-  <% if session[:service_provider_id] %>
-    <%= link_to 'New Service', new_service_path %>
-    <li><%= link_to "#{ServiceProvider.find(session[:service_provider_id])[:first_name]}, sign out", :sp_logout, method: :post  %></li>
+  <div class="navL">
+    <!-- display logo everywhere but splash page -->
+    <% if current_page?('/') %>
+    <% else %>
+    <a href="/">
+      <h1 class="title">Lancer</h1>
+    </a>
     <% end %>
 
+    <% if session[:service_provider_id] %>
+      <%= link_to 'New Service', new_service_path %>
+      <li><%= link_to "#{ServiceProvider.find(session[:service_provider_id])[:first_name]}, sign out", :sp_logout, method: :post  %></li>
+    <% end %>
 
-  <ul class="">
+    <% if current_page?('/') %>
+    <h4>
+
+        <% if session[:customer_id]%>
+          <a href="/services">
+            Check out and book services
+          </a>
+        <% elsif session[:service_provider_id]%>
+          <a href="/services/new">
+            Create new services
+          </a>
+        <% else %>
+          <a href="/services">
+            Check out our newest service postings
+          </a>
+        <% end %>
+      <% else %>
+      <!-- we show the logo not this if we're on anything but the home page -->
+      <% end %>
+    </h4>
+  </div>
+
+
+
+
+  <div class="navR">
+  <ul >
     <!-- if customer logged in -->
     <% if session[:customer_id] %>
     <li>
-      <%= link_to "#{Customer.find(session[:customer_id])[:first_name]}, sign out", :logout, method: :post  %><
-      /li>
+      <%= link_to "#{Customer.find(session[:customer_id])[:first_name]}, sign out", :logout, method: :post  %>
+    </li>
     <!-- is general customer is logged in -->
     <% elsif session[:service_provider_id]%>
 
-    <li><%= link_to "#{ServiceProvider.find(session[:service_provider_id])[:first_name]}, sign out", :sp_logout, method: :post  %></li>
+    <li>
+      <%= link_to "#{ServiceProvider.find(session[:service_provider_id])[:first_name]}, sign out", :sp_logout, method: :post  %>
+      </li>
     <% else %>
     <li class="dropdown">
       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
        Register <i class="fas fa-chevron-down"></i>
       </a>
       <ul class="dropdown-menu">
-        <li><%= link_to 'Sign up as user', [:signup] %></li>
-        <li><%= link_to 'Sign up as provider', [:sp_signup]
+        <li><%= link_to 'Sign up as customer', [:signup] %></li>
+        <li><%= link_to 'Sign up as service provider', [:sp_signup]
         %></li>
       </ul>
     </li>
     </ul>
-    <ul>
+
+    <ul >
     <li class="dropdown">
       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
         Log in <i class="fas fa-chevron-down"></i>
       </a>
       <ul class="dropdown-menu">
-        <li><%= link_to 'Login as user', [:login] %></li>
-        <li><%= link_to 'Login as provider', [:sp_login] %></li>
+        <li><%= link_to 'Login as customer', [:login] %></li>
+        <li><%= link_to 'Login as service provider', [:sp_login] %></li>
       </ul>
     </li>
     <% end %>
   </ul>
+  </div>
+
 </nav>

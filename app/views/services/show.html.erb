@@ -1,29 +1,24 @@
-  <div class="serviceFeed">
+<div class="serviceShow">
+<div class="serviceL">
+  <div class="service">
     <h3><%= @service.title %></h3>
     <p><%= @service.description %></p>
-
     <div class="imgContainer">
-          <%= image_tag @service.img.url, :class => 'object-fit_cover' %>
-        </div>
-
+      <%= image_tag @service.img.url, :class => 'object-fit_cover' %>
+    </div>
     <h5>$<%= @service.price %>/per session</h5>
     <div class="timeBox">
-      <h4>Session Time</h5>
+      <h4>Session Time</h4---->
       <h5><%= @service.start_time.time.strftime("On %D from %I:%m %p") %> - <%= @service.end_time.time.strftime("%I:%m %p") %></h5>
     </div>
     <% if @service.is_booked  %>
-      <div class='isBooked'>SORRRY THIS SERVICE IS BOOKED</div>
+    <div class='isBooked'>SORRRY THIS SERVICE IS BOOKED</div>
     <%else %>
-
-
-        <%=render partial: "charges/new" %>
-
+    <%=render partial: "charges/new" %>
     <% end %>
+  </div>
+</div>
+<div class="serviceR">
 
-    <% puts "******************"  %>
-    <% puts  'from'  %>
-   <% puts "** ***  *** *** ***  ****"  %>
-    <% puts  @service.price  %>
-    <% puts "******************"  %>
-
-
+</div>
+</div>

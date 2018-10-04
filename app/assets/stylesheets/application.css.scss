@@ -16,19 +16,17 @@
 
  */
 
-
 @import "bootstrap";
 @import "font-awesome";
 @import "font-awesome";
 @import "services";
  body {
   background: linear-gradient(45deg, #2e7cff, #6b00ff);
-  background-size: 400% 400%  ;
+  background-repeat:no-repeat;
+  background-size: 900% 900%;
   -webkit-animation: AnimationName 11s ease infinite;
   -moz-animation: AnimationName 11s ease infinite;
   animation: AnimationName 11s ease infinite;
-
-
   font-family:'Fredoka One', cursive;
   @-webkit-keyframes AnimationName {
       0%{background-position:0% 97%}
@@ -48,11 +46,14 @@
   color:white;
 }
 
-
+.title{
+  font-size: 40px;
+}
+h1{
+  margin:none;
+}
 form.button_to {
   display: inline;
 }
 
-.serviceFeed {
-      margin-top: 6em;
-}
+

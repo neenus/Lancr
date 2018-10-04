@@ -6,13 +6,53 @@
 @import "bootstrap";
 @import "font-awesome";
 
-.RCC{
-  display:flex;
-  margin-top: 8em
+
+
+
+.order-summary{
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.orders-show{
+  padding: 5px;
+
 
 }
 
-.RU{
-  width: 10em;
-  text-align: center
+
+
+
+.registerHeader{
+
 }
+
+.newWrapper{
+  height:90vh;
+  margin: 50px auto 0;
+  max-width:600px;
+  font-size:20px;
+  -webkit-text-stroke: 0.3px black;
+}
+
+.formButton{
+  margin:10px auto 0;
+  font-size:15px;
+  font-weight:900;
+  border: none;
+  border-radius: 10px;
+  color:white;
+  background-color: tomato;
+  padding: 10px 15px;
+  -webkit-text-stroke: transparent;
+  input{
+    border:none;
+    -webkit-text-stroke: transparent;
+  }
+
+}
+
+.formButton:hover{
+    background-color: darken(tomato,15%);
+  }

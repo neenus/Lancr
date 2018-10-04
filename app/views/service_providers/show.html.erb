@@ -3,9 +3,7 @@
 
 
 
-  <div class="order-summary jumbotron">
     <h2>Welcome <%= @service_provider.first_name%>!</h2>
-  </div>
 
 
 <div class="order-summary jumbotron">
@@ -17,18 +15,14 @@
         </tr>
       </thead>
       <tbody>
-
         <% @services.each do |service| %>
-
           <%= render 'service', service: service %>
         <% end %>
       </tbody>
-
     </table>
   </div>
 
   <%= link_to "Create new service", new_service_path, class: 'btn btn-lg btn-primary' %>
-
 </section>
 
 
