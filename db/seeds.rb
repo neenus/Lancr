@@ -248,16 +248,16 @@ service13 = Service.create(
   is_booked: false
 )
 
-service14 = Service.create(
-  service_provider_id: sp3.id,
-  title: "Whoof Whoof",
-  description: "Whoof Whoof Whof??! Whof Whoof Whooof",
-  start_time: Faker::Time.forward(10, :day),
-  end_time: Faker::Time.forward(20, :day),
-  price: Faker::Commerce.price,
-  img: Rails.root.join('/vagrant/lancrFinal/public/uploads/dog-massage-service.jpg').open,
-  is_booked: false
-)
+# service14 = Service.create(
+#   service_provider_id: sp3.id,
+#   title: "Whoof Whoof",
+#   description: "Whoof Whoof Whof??! Whof Whoof Whooof",
+#   start_time: Faker::Time.forward(10, :day),
+#   end_time: Faker::Time.forward(20, :day),
+#   price: Faker::Commerce.price,
+#   img: Rails.root.join('/vagrant/lancrFinal/public/uploads/dog-massage-service.jpg').open,
+#   is_booked: false
+# )
 
 service15 = Service.create(
   service_provider_id: sp3.id,
