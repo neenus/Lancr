@@ -12,7 +12,7 @@ class ServicesController < ApplicationController
   def show
     @service = Service.find(params[:id])
 
-    @service_provider = ServiceProvider.find(params[:service][:service_provider_id])
+    # @service_provider = ServiceProvider.find([:service][:service_provider_id])
 
   end
 
