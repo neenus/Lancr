@@ -26,7 +26,7 @@ class ServiceProvidersController < ApplicationController
   # GET /service_providers/new
   def new
     @service_provider = ServiceProvider.new
-    @service_provider.pic = params[:service_provider][:pic]
+    @service_provider.img = params[:service_provider][:img]
 
   end
 
@@ -82,6 +82,6 @@ class ServiceProvidersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def service_provider_params
-      params.require(:service_provider).permit(:first_name, :last_name, :email, :password,:pic, :password_confirmation)
+      params.require(:service_provider).permit(:first_name, :last_name, :email, :password,:img, :password_confirmation)
     end
 end

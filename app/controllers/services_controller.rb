@@ -11,7 +11,6 @@ class ServicesController < ApplicationController
   # GET /services/1.json
   def show
     @service = Service.find(params[:id])
-
     @service_provider = ServiceProvider.find(params[:service][:service_provider_id])
 
   end
