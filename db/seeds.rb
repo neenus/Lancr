@@ -16,7 +16,7 @@ sp1 = ServiceProvider.create(
   last_name: "Gabriel",
   email: "neenus@nraccounting.ca",
   password_digest: BCrypt::Password.create('asdf'),
-  img: Rails.root.join('/vagrant/lancrFinal/public/uploads/boy.jpg').open,
+  img: Rails.root.join('/vagrant/Final1/Lancr/public/uploads/boy.jpg').open,
   bio: "Neenus received an Accounting and Computer Applications Diploma from CDI College in 2007 and is currently pursuing a Bachelor of Commerce degree in Accounting with Athabasca University.
         Neenus focuses on junior audit work, review and notice to reader engagements, preparation of corporate and personal income tax returns, he is also involved in providing IT support by managing the internal firm technology and keeping the servers current."
 )
@@ -26,7 +26,7 @@ sp2 = ServiceProvider.create(
   last_name: Faker::Name.name,
   email: Faker::Internet.free_email,
   password_digest: BCrypt::Password.create('asdf'),
-  img: Rails.root.join('/vagrant/lancrFinal/public/uploads/girl.jpg').open,
+  img: Rails.root.join('/vagrant/Final1/Lancr/public/uploads/girl.jpg').open,
   bio: "I am proud to be the owner and a hairstylist at Confidente. I have been in the industry for 13 years now.
         I love my job because I get to make every person that sits in my chair feel great about themselves.
         I get to meet so many new people every day and everyone has a different story, wants a different look and I get to help them accomplish it.
@@ -41,7 +41,7 @@ sp3 = ServiceProvider.create(
   last_name: Faker::Name.name,
   email: Faker::Internet.free_email,
   password_digest: BCrypt::Password.create('asdf'),
-  img: Rails.root.join('/vagrant/lancrFinal/public/uploads/girl2.jpg').open,
+  img: Rails.root.join('/vagrant/Final1/Lancr/public/uploads/girl2.jpg').open,
   bio: "Hello I can do everything and that is why I listed all kind of services on lancr contact me and I'm your go to gal!!"
 )
 
