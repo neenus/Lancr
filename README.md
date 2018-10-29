@@ -29,8 +29,8 @@ run bundle install + db:create and then seed with seeds created with Faker to si
 
 !["Provider-create-service"](https://github.com/neenus/Lancr/blob/master/doc/Provider-create-service.gif)
 
-* Service-provider dash-board shows services that have been booked and not booked yet
+* Service-provider dash-board shows services that have been booked and not booked by customers
 
-!["provider-dashboard"](https://github.com/neenus/Lancr/blob/master/doc/provider-dashboar.gif)
+!["provider-dashboard"](https://github.com/neenus/Lancr/blob/master/doc/provider-dashboard.gif)
 
 
