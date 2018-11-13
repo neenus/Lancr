@@ -24,6 +24,10 @@ ActiveRecord::Schema.define(version: 2018_10_04_020531) do
     t.index ["service_id"], name: "index_bookings_on_service_id"
   end
 
+  create_table "categories", force: :cascade do |t|
+    t.string "name", limit: 20, null: false
+  end
+
   create_table "customers", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
@@ -31,6 +35,13 @@ ActiveRecord::Schema.define(version: 2018_10_04_020531) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "password_digest"
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.string "name", limit: 200, null: false
+    t.bigserial "category_id", null: false
+    t.bigserial "station_id", null: false
+    t.bigserial "weight", null: false
   end
 
   create_table "service_providers", force: :cascade do |t|
@@ -54,8 +65,14 @@ ActiveRecord::Schema.define(version: 2018_10_04_020531) do
     t.integer "price"
     t.string "img"
     t.bigint "service_provider_id"
-    t.boolean "is_booked", default: false
+    t.boolean "is_booked"
     t.index ["service_provider_id"], name: "index_services_on_service_provider_id"
+  end
+
+  create_table "stations", force: :cascade do |t|
+    t.string "name", limit: 200, null: false
+    t.float "latitude", null: false
+    t.float "longitude", null: false
   end
 
   add_foreign_key "bookings", "customers"
