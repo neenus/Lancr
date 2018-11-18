@@ -1,24 +1,38 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Lancr
 
-Things you may want to cover:
+Lancr is a ruby on rails web app for freelancers. Freelancers post a job and their available time and it is posted to the main feed. Users can view the feed and book work and read about the freelancers.
 
-* Ruby version
 
-* System dependencies
+built on ruby '2.3.5' and rails  5.2.1
 
-* Configuration
+run bundle install + db:create and then seed with seeds created with Faker to simulate users, posts and buildings.
 
-* Database creation
+## Final Product Demo
 
-* Database initialization
+## Customer Features:
 
-* How to run the test suite
+* When users sign up as customers, they are able to book and prepay the services.
 
-* Services (job queues, cache servers, search engines, etc.)
+!["user-prepay"](https://github.com/neenus/Lancr/blob/master/doc/User-prepay.gif)
 
-* Deployment instructions
+* Customer dashboard shows order lists.
 
-* ...
+!["Customer-dashboard"](https://github.com/neenus/Lancr/blob/master/doc/customer-dashboard.gif)
+
+## Service-provider Features:
+
+* When users sign up as service-providers, they are able to upload biography.
+
+!["upload-bio"](https://github.com/neenus/Lancr/blob/master/doc/upload-bio.gif)
+
+* When users sign up as service-providers, they are able to creat a new service.
+
+!["Provider-create-service"](https://github.com/neenus/Lancr/blob/master/doc/Provider-create-service.gif)
+
+* Service-provider dash-board shows states that services have been booked or not booked yet.
+
+!["provider-dashboard"](https://github.com/neenus/Lancr/blob/master/doc/provider-dashboard.gif)
+
+
