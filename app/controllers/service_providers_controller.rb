@@ -38,6 +38,7 @@ class ServiceProvidersController < ApplicationController
   # POST /service_providers.json
   def create
     @service_provider = ServiceProvider.new(service_provider_params)
+    @service_provider.img = params[:service_provider][:img]
 
     respond_to do |format|
       if @service_provider.save
@@ -82,6 +83,6 @@ class ServiceProvidersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def service_provider_params
-      params.require(:service_provider).permit(:first_name, :last_name, :email, :password,:img, :password_confirmation)
+      params.require(:service_provider).permit(:first_name, :last_name, :email, :password,:img, :bio, :password_confirmation)
     end
 end

@@ -21,28 +21,29 @@
 @import "font-awesome";
 @import "services";
  body {
-  background: linear-gradient(45deg, #2e7cff, #6b00ff);
-  background-repeat:no-repeat;
-  background-size: 900% 900%;
-  -webkit-animation: AnimationName 11s ease infinite;
-  -moz-animation: AnimationName 11s ease infinite;
-  animation: AnimationName 11s ease infinite;
+  background-color:#2e7cff;
+  // background: linear-gradient(55deg, #2e7cff, #6b00ff);
+  // // background-repeat:no-repeat;
+  // background-size: 100% 100%;
+  // -webkit-animation: AnimationName 11s ease infinite;
+  // -moz-animation: AnimationName 11s ease infinite;
+  // animation: AnimationName 11s ease infinite;
   font-family:'Fredoka One', cursive;
-  @-webkit-keyframes AnimationName {
-      0%{background-position:0% 97%}
-      50%{background-position:100% 4%}
-      100%{background-position:0% 97%}
-  }
-  @-moz-keyframes AnimationName {
-      0%{background-position:0% 97%}
-      50%{background-position:100% 4%}
-      100%{background-position:0% 97%}
-  }
-  @keyframes AnimationName {
-      0%{background-position:0% 97%}
-      50%{background-position:100% 4%}
-      100%{background-position:0% 97%}
-  }
+  // @-webkit-keyframes AnimationName {
+  //     0%{background-position:0% 97%}
+  //     50%{background-position:100% 4%}
+  //     100%{background-position:0% 97%}
+  // }
+  // @-moz-keyframes AnimationName {
+  //     0%{background-position:0% 97%}
+  //     50%{background-position:100% 4%}
+  //     100%{background-position:0% 97%}
+  // }
+  // @keyframes AnimationName {
+  //     0%{background-position:0% 97%}
+  //     50%{background-position:100% 4%}
+  //     100%{background-position:0% 97%}
+  // }
   color:white;
 }
 

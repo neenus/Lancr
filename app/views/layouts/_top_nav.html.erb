@@ -7,16 +7,18 @@
       <h1 class="title">Lancer</h1>
     </a>
     <% end %>
-    <% if session[:service_provider_id] %>
-    <%= link_to 'New Service', new_service_path %>
-    <li><%= link_to "#{ServiceProvider.find(session[:service_provider_id])[:first_name]}, sign out", :sp_logout, method: :post  %></li>
-    <% end %>
+
+
+
     <% if current_page?('/') %>
     <h4>
     <% if session[:customer_id]%>
-    <a href="/services">
+     <a href="/services">
       Check out and book services
     </a>
+
+
+
     <% elsif session[:service_provider_id]%>
     <a href="/services/new">
       Create new services
@@ -36,7 +38,9 @@
       <!-- if customer logged in -->
       <% if session[:customer_id] %>
       <li>
+        <a href='/customers/<%= session[:customer_id] %>'>  ~My Dashboard~ </a>
         <%= link_to "#{Customer.find(session[:customer_id])[:first_name]}, sign out", :logout, method: :post  %>
+
       </li>
       <!-- is general customer is logged in -->
       <% elsif session[:service_provider_id]%>
