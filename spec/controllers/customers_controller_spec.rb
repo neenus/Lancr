@@ -51,7 +51,7 @@ RSpec.describe CustomersController, type: :controller do
 
     context 'with invalid params' do
       it 'renders a JSON response with errors for the new customer' do
-        post :create, params: { customer: invalid_attributes }
+        post :create, params: { customer: { first_name: '' } }
         expect(response).to have_http_status(:unprocessable_entity)
         expect(response.content_type).to eq('application/json')
       end
@@ -60,15 +60,11 @@ RSpec.describe CustomersController, type: :controller do
 
   describe 'PUT #update' do
     context 'with valid params' do
-      let(:new_attributes) do
-        skip('Add a hash of attributes valid for your model')
-      end
-
       it 'updates the requested customer' do
         customer = Customer.create! valid_attributes
-        put :update, params: { id: customer.to_param, customer: new_attributes }
+        put :update, params: { id: customer.to_param, customer: { first_name: 'Gabriel' } }
         customer.reload
-        skip('Add assertions for updated state')
+        expect(customer.first_name).to eq('Gabriel')
       end
 
       it 'renders a JSON response with the customer' do
